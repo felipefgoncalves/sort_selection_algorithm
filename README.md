@@ -1,2 +1,2 @@
-# selection_sort
-Python Selection Sorting Algorithm with function
+# Selection Sort Algorithm
+Python Selection Sorting Algorithm using a single function
