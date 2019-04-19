@@ -4,9 +4,20 @@ Ordenação de list numérica com o Algoritmo Selection Sort
 
 Sorting an array list with Selection Sort Algorithm
 """
+# Importing the library that randomizes values
+import random
 
-# Array example
-list = [3, 2, 1, 54, 10, 100, 151, 5]
+# Asking for two user inputs to create the array
+arrayInputSize = int(input('How many itens the array should have? '))
+maxArrayListValue = int(input('What is the highest value of the array? '))
+
+# Starting with an empty array
+list = []
+
+# A simple for loop which iterates over the input answers and append the random values into the array
+for i in range(arrayInputSize):
+    x = random.randint(0, maxArrayListValue)
+    list.append(x)
 
 # Sorting Function
 def selection_sort_algorithm(list):
@@ -29,5 +40,5 @@ def selection_sort_algorithm(list):
             list[lowest_value] = aux
     print(list)
 
-# Finally, calling the function
+# Finally, calling the function for sorting the list
 selection_sort_algorithm(list)
