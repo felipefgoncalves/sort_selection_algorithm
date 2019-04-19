@@ -6,6 +6,7 @@ Sorting an array list with Selection Sort Algorithm
 """
 # Importing the library that randomizes values
 import random
+import time
 
 # Asking for two user inputs to create the array
 arrayInputSize = int(input('How many itens the array should have? '))
@@ -21,7 +22,8 @@ for i in range(arrayInputSize):
 
 # Sorting Function
 def selection_sort_algorithm(list):
-
+# Starting the timer of the code.
+    startTimer = time.time()
     # 'i' will iterate over all itens in the array
     for i in range(len(list)):
         # variable 'lowest_value' will be our lowest value on the array, receiving 'i'
@@ -38,7 +40,9 @@ def selection_sort_algorithm(list):
             aux = list[i]
             list[i] = list[lowest_value]
             list[lowest_value] = aux
+    endTimer = time.time()
+    print(endTimer - startTimer),
     print(list)
-
+    
 # Finally, calling the function for sorting the list
 selection_sort_algorithm(list)
